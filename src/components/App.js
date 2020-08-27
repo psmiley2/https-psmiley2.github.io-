@@ -26,7 +26,9 @@ export default function App() {
         Cookies.set("isRobot", true, {});
     }
 
-    if (isRobot === "false") {
+    if (isRobot === "true" && window.innerWidth > 550) {
+        return <RobotCheck />;
+    } else {
         return (
             <>
                 <Router history={history}>
@@ -46,7 +48,5 @@ export default function App() {
                 </Router>
             </>
         );
-    } else {
-        return <RobotCheck />;
     }
 }
