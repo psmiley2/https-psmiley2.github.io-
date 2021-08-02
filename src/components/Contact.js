@@ -24,9 +24,9 @@ const Contact = () => {
 
     return (
         <div>
-            <a onClick={handleClickOpen} color="inherit">
-                Contact
-            </a>
+            <Button onClick={handleClickOpen} variant="contained">
+                Contact Info
+            </Button>
 
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Contact</DialogTitle>
